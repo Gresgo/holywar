@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/topics_activity"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mini_profile"
+                android:orientation="vertical"
+        >
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Burn 5 ass"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+            />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp"
+            >
+
+                <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:max="100"
+                        android:progress="25"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="+5"
+                        android:layout_marginLeft="20dp"
+                />
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/holyass"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                />
+
+                <Button
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/button_back"
+                        android:text="GO!"
+                        android:layout_marginRight="5dp"
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mini_profile"
+                android:background="@color/colorPrimary"
+        />
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:onClick="addTopic"
+                android:hint="@string/sort_hot"
+                android:textColorHint="@color/colorPrimary"
+                android:background="@drawable/button_back"
+                android:layout_below="@id/mini_profile"
+                android:id="@+id/sort_hot"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:onClick="addTopic"
+                android:hint="@string/sort_date"
+                android:textColorHint="@color/white"
+                android:background="@color/absolute"
+                android:layout_below="@id/mini_profile"
+                android:id="@+id/sort_date"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/sort_hot"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:onClick="addTopic"
+                android:hint="@string/sort_rating"
+                android:textColorHint="@color/white"
+                android:background="@color/absolute"
+                android:layout_below="@id/mini_profile"
+                android:id="@+id/sort_rate"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/sort_date"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:onClick="addTopic"
+                android:hint="@string/sort_create"
+                android:textColorHint="@color/colorPrimary"
+                android:background="@drawable/button_back"
+                android:layout_below="@id/mini_profile"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/create"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topics_recycler"
+                android:orientation="vertical"
+                android:layout_below="@+id/sort_hot"
+                android:layout_marginTop="15dp"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

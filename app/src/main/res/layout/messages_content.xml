@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/messages_activity"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+    >
+
+        <Button
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="@drawable/white_button"
+                android:textSize="15sp"
+                android:hint="@string/butthurt"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/butthurt"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msg_recycler"
+                android:layout_above="@+id/edit"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/text_back"
+                android:id="@+id/edit"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+        >
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/x"
+                    android:background="@color/absolute"
+                    android:id="@+id/options"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+            />
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="(─‿‿─)"
+                    android:background="@color/absolute"
+                    android:id="@+id/msg_inp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="15sp"
+            />
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/send"
+                    android:background="@color/absolute"
+                    android:id="@+id/send"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="10dp"
+            />
+
+        </LinearLayout>
+
+        <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="(─‿‿─)"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:id="@+id/msg_inp"-->
+                <!--android:background="@drawable/text_back"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:textSize="15sp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:drawableRight="@drawable/send"-->
+                <!--android:drawableLeft="@drawable/plus"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:layout_alignParentBottom="true"-->
+        <!--/>-->
+    </RelativeLayout>
+</RelativeLayout>

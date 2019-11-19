@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/holywar_bg"
+>
+
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+    >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/welcome"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/word_username"
+                android:textSize="12sp"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"
+                android:id="@+id/username"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/word_email"
+                android:textSize="12sp"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"
+                android:id="@+id/email"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/word_pass"
+                android:textSize="12sp"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+        >
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/white"
+                    android:inputType="textPassword"
+                    android:id="@+id/password"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="15sp"
+            />
+
+            <CheckBox
+                    android:id="@+id/onpass"
+                    android:button="@drawable/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignRight="@+id/password"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+            />
+        </RelativeLayout>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmPass"
+                android:textSize="12sp"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+        >
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/white"
+                    android:inputType="textPassword"
+                    android:id="@+id/password_conf"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="15sp"
+            />
+
+            <CheckBox
+                    android:id="@+id/onpass_conf"
+                    android:button="@drawable/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignRight="@+id/password_conf"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+            />
+        </RelativeLayout>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_back"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:hint="@string/createAcc"
+                android:textColorHint="@color/colorPrimary"
+                android:id="@+id/signUp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/haveAcc"
+                    android:textSize="10sp"
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/montserrat_medium"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:text="@string/signIn"
+                    android:id="@+id/changeFragment"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_bold"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

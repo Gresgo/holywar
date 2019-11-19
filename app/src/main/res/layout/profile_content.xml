@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/profile_activity"
+>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+    >
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        >
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/level">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="12.5dp"
+                        android:layout_marginLeft="12.5dp"
+                        android:src="@drawable/camera"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/profile"
+                />
+
+                <ProgressBar
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:progress="80"
+                        android:max="100"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/progressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:id="@+id/level_progress"
+                        android:background="@drawable/progress_bg"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/level_progress"
+                        android:text="Lvl 61"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/level_count"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/level_count"
+                        android:text="100 / 1500"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12dp"
+                />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/level"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:id="@+id/name"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="15sp"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                >
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_top"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="10sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1.9"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_rating"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="10sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="114"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:id="@+id/disputes"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_disputes"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="10sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="57%"
+                                android:textColor="@color/white"
+                                android:paddingRight="8dp"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:id="@+id/winrate"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_wins"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="10sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/pager"
+        >
+            <android.support.v4.view.PagerTabStrip
+                    android:id="@+id/pagerTabStrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    style="@style/pagetext"
+            >
+            </android.support.v4.view.PagerTabStrip>
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_root"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+        />
+
+        <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/holyass"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+        />
+
+        <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_win"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="15sp"
+                android:id="@+id/state"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_gotAss"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"
+                android:id="@+id/assCount"
+        />
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_back"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:hint="@string/word_nice"
+                android:textColorHint="@color/bgStart"
+                android:id="@+id/dialog_continue"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+    </LinearLayout>
+</RelativeLayout>

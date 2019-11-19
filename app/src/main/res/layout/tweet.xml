@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:id="@+id/tweet_layout"
+    >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more_options"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+            />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/camera"
+                    android:id="@+id/avatar"
+                    android:layout_centerVertical="true"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Author"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/tweet_author"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@+id/avatar"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_semibold"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a hour ago"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/tweet_date"
+                    android:textSize="11sp"
+                    android:textColor="@color/mainText"
+                    android:layout_toRightOf="@+id/tweet_author"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_medium"
+            />
+        </RelativeLayout>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ExampleText"
+                android:textSize="20sp"
+                android:id="@+id/tweet_text"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:fontFamily="@font/montserrat_medium"
+        />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/like"
+                    android:src="@drawable/active_like"
+                    android:background="@color/absolute"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/tweet_likes"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+            />
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/dislike"
+                    android:src="@drawable/active"
+                    android:background="@color/absolute"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/tweet_dislikes"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+            />
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/comments"
+                    android:src="@drawable/chat_fill"
+                    android:background="@color/absolute"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/tweet_comments"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

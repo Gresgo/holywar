@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_root"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/word_topic"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Какой-то там"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:id="@+id/queue_topic_name"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_searchingFor"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="15sp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="80sp"
+                android:id="@+id/timer"
+                android:fontFamily="@font/montserrat_bold"
+        />
+
+        <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_wait"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"
+        />
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_back"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:hint="@string/word_cancel"
+                android:textColorHint="@color/bgStart"
+                android:id="@+id/dialog_cancel"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+    </LinearLayout>
+</RelativeLayout>

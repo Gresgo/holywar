@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#21305E</color>
+    <color name="bg">#A7F2FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="prozr">#99FFFFFF</color>
+    <color name="txt_bg">#2897AD</color>
+    <color name="mainBackground">#21305E</color>
+    <!--<color name="mainText">#23D1C1</color>-->
+    <color name="mainText">#80FFFFFF</color>
+    <color name="transparent">#33FFFFFF</color>
+    <color name="absolute">#00FFFFFF</color>
+    <color name="red">#FE5F5F</color>
+    <color name="blue">#60E0FF</color>
+    <color name="bgStart">#121E3F</color>
+    <color name="bgEnd">#131F42</color>
+</resources>

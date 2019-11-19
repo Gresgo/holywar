@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileActivity"
+        android:background="@drawable/holywar_bg"
+>
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:background="@color/absolute"
+            app:elevation="0dp"
+    >
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/absolute"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/timer"
+            />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/messages_content"/>
+
+</android.support.design.widget.CoordinatorLayout>

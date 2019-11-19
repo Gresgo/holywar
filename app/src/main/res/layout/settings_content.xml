@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/settings_activity"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+    >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/profile"
+                android:src="@drawable/camera"
+                android:layout_marginBottom="50dp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="Username3228"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_semibold"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile"
+                android:orientation="vertical"
+                android:id="@+id/account_settings"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word_account"
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+            />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:id="@+id/username"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/union_6"
+                        android:id="@+id/username_pic"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_username"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_username"
+                        android:layout_toRightOf="@+id/username_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparent"
+                        android:layout_below="@+id/settings_username"
+                        android:layout_toRightOf="@+id/username_pic"
+                        android:layout_marginTop="2dp"
+                />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/email"
+                        android:id="@+id/email_pic"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_email"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_email"
+                        android:layout_toRightOf="@+id/email_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparent"
+                        android:layout_below="@+id/settings_email"
+                        android:layout_toRightOf="@+id/email_pic"
+                        android:layout_marginTop="2dp"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/union_7"
+                        android:id="@+id/password_pic"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/changePass"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_password"
+                        android:layout_toRightOf="@+id/password_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_settings"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word_settings"
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+            />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/notification"
+                        android:id="@+id/notification_pic"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_notif"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_notification"
+                        android:layout_toRightOf="@+id/notification_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparent"
+                        android:layout_below="@+id/settings_notification"
+                        android:layout_toRightOf="@+id/notification_pic"
+                        android:layout_marginTop="2dp"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/chat"
+                        android:id="@+id/chats_pic"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_chats"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_chats"
+                        android:layout_toRightOf="@+id/chats_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparent"
+                        android:layout_below="@+id/settings_chats"
+                        android:layout_toRightOf="@+id/chats_pic"
+                        android:layout_marginTop="2dp"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/worlwide"
+                        android:id="@+id/language_pic"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_language"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_language"
+                        android:layout_toRightOf="@+id/language_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparent"
+                        android:layout_below="@+id/settings_language"
+                        android:layout_toRightOf="@+id/language_pic"
+                        android:layout_marginTop="2dp"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+            >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/union_8"
+                        android:id="@+id/help_pic"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_help"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/settings_help"
+                        android:layout_toRightOf="@+id/help_pic"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_centerVertical="true"
+                />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

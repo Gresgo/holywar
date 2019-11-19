@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+    >
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@color/mainBackground"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/profile_placeholder"
+            />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_placeholder"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+            >
+
+                <View
+                        android:layout_width="200dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/placeholder"
+                />
+
+                <View
+                        android:layout_width="150dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/placeholder"
+                        android:layout_marginTop="10dp"
+                />
+
+                <View
+                        android:layout_width="150dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/placeholder"
+                        android:layout_marginTop="10dp"
+                />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="250dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/placeholder"
+                    android:layout_below="@id/profile_placeholder"
+                    android:layout_marginTop="10dp"
+            />
+
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+        />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_weight="0.5"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Latest Topics"
+                    android:textColor="@color/white"
+                    android:id="@+id/label_placeholder"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15sp"
+            />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/latest_placeholder"
+                    android:layout_below="@id/label_placeholder"
+            >
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/placeholder"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                />
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/placeholder"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/latest_placeholder"
+            />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="New posts"
+                    android:textColor="@color/white"
+                    android:id="@+id/label1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15sp"
+            />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/posts_placeholder"
+                    android:layout_below="@id/label1"
+            >
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/placeholder"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                />
+
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/placeholder"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/posts_placeholder"
+            />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

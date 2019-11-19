@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/menu_activity"
+        tools:context=".MenuActivity"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/shimmer"
+            android:visibility="gone"
+    >
+
+        <include layout="@layout/menu_placeholder"/>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:id="@+id/content_space"
+    >
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_info"
+        >
+
+            <!--<ImageView-->
+                    <!--android:layout_width="80.2dp"-->
+                    <!--android:layout_height="80.2dp"-->
+                    <!--android:id="@+id/profile"-->
+                    <!--android:src="@drawable/circle"-->
+                    <!--android:background="@drawable/camera"-->
+                    <!--android:layout_marginTop="12dp"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!---->
+            <!--/>-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/camera"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/profile"
+            />
+
+            <ProgressBar
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:progress="0"
+                    android:max="100"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:id="@+id/level_progress"
+                    android:background="@drawable/progress_bg"
+            />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/level_progress"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/name"
+                        android:fontFamily="@font/montserrat_semibold"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/word_stats"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/name"
+                        android:fontFamily="@font/montserrat_semibold"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_top"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="8sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1.9"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_rating"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="8sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:id="@+id/disputes"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_disputes"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="8sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                    >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0%"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:id="@+id/winrate"
+                        />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/word_wins"
+                                android:textColor="@color/white"
+                                android:paddingRight="10dp"
+                                android:textSize="8sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_bold"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/currency"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/cur"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/cur"
+                        android:textSize="15sp"
+                        android:id="@+id/currency"
+                />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/holyass"
+                        android:layout_toLeftOf="@+id/currency"
+                        android:layout_below="@+id/cur"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/donate"
+                />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/level_progress"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stat_achievements"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 ass"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_medium"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 days"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_medium"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35 changed minds"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_medium"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 tweet"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_medium"
+                />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mini_profile"
+                android:background="@color/transparent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+        />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_weight="0.5"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/latestTopics"
+                    android:textColor="@color/white"
+                    android:id="@+id/label"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15sp"
+            />
+
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/latest_recycler"
+                    android:layout_below="@id/label"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seeMore"
+                android:onClick="onTopicClick"
+                android:id="@+id/topics"
+                android:textColor="@color/mainText"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/latest_recycler"
+                android:textSize="15sp"
+        />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/newPosts"
+                    android:textColor="@color/white"
+                    android:id="@+id/label1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15sp"
+            />
+
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/posts_recycler"
+                    android:layout_below="@id/label1"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seeMore"
+                    android:onClick="onTweetClick"
+                    android:id="@+id/tweets"
+                    android:textColor="@color/mainText"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/posts_recycler"
+                    android:textSize="15sp"
+            />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

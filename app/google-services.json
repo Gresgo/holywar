@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "853112710059",
+    "firebase_url": "https://wtfwar-aa218.firebaseio.com",
+    "project_id": "wtfwar-aa218",
+    "storage_bucket": "wtfwar-aa218.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853112710059:android:727aaf95b6d91425",
+        "android_client_info": {
+          "package_name": "com.example.wtfwar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853112710059-gasqo7ejfptq5n5gauapaj31pi0279i8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wtfwar",
+            "certificate_hash": "d60d5d062733b5324722edc690bf0deda070ba71"
+          }
+        },
+        {
+          "client_id": "853112710059-g5t7tuamemk7odoqn4ev7q3ev897amjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUM5tuNweMsdiNG3MS5kQB7M1NQneYvMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853112710059-g5t7tuamemk7odoqn4ev7q3ev897amjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

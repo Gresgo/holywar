@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/word_menu"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/title"
+            android:fontFamily="@font/montserrat_semibold"
+    />
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+    >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginLeft="12.5dp"
+                android:src="@drawable/camera"
+                android:scaleType="centerCrop"
+                android:id="@+id/header_profile"
+        />
+
+        <ProgressBar
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:progress="80"
+                android:max="100"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/header_level_progress"
+                android:background="@drawable/progress_bg"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/header_profile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/header_name"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="15sp"
+        />
+
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/holyass"
+                android:layout_toRightOf="@id/header_profile"
+                android:layout_below="@+id/header_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ass"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="51"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/ass"
+                android:layout_below="@id/header_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:id="@+id/header_currency"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>
