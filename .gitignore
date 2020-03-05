@@ -89,3 +89,5 @@ gradlew
 gradlew.bat
 gradle/
 settings.gradle
+app/google-services.json
+app/proguard-rules.pro

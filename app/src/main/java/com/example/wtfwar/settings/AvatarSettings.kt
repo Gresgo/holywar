@@ -51,13 +51,17 @@ class AvatarSettings : AppCompatActivity() {
     private fun uploadImg(){
 
         if (filePath!=null){
-
+            change.isClickable = false
             val storageRef = FirebaseStorage.getInstance().reference.child("avatars/"+user.uid)
-            storageRef.putFile(filePath!!).addOnSuccessListener {
-                Toast.makeText(this@AvatarSettings, "Uploaded", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener{
-                Toast.makeText(this@AvatarSettings, it.message.toString(), Toast.LENGTH_SHORT).show()
-            }
+            storageRef.putFile(filePath!!)
+                .addOnSuccessListener {
+                    change.isClickable = true
+                    Toast.makeText(this@AvatarSettings, "Uploaded", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    change.isClickable = true
+                    Toast.makeText(this@AvatarSettings, it.message.toString(), Toast.LENGTH_SHORT).show()
+                }
         }else{
             Toast.makeText(this@AvatarSettings, "Choose image", Toast.LENGTH_SHORT).show()
         }
@@ -72,6 +76,7 @@ class AvatarSettings : AppCompatActivity() {
             filePath = data.data!!
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)
+                Toast.makeText(this@AvatarSettings, bitmap.width.toString(), Toast.LENGTH_SHORT).show()
                 if (bitmap.width <= 2500 && bitmap.height <= 2500
                     && (bitmap.height/bitmap.width <= 4) && (bitmap.width/bitmap.height <= 4)){
                     val example = findViewById<ImageView>(R.id.example)

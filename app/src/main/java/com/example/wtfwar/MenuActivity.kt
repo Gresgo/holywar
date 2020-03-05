@@ -196,6 +196,9 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 experience.progress = stats.experience / (100*61)
                 headerExp.progress = stats.experience / (100*61)
 
+                shimmer.stopShimmer()
+                shimmer.visibility = View.GONE
+
                 updateAchievements(stats.currency, stats.disputes, stats.experience)
             }
 
@@ -212,13 +215,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             avatar.setImageBitmap(bmp)
             val headerAvatar = findViewById<ImageView>(R.id.header_profile)
             headerAvatar.setImageBitmap(bmp)
-//            val ob = BitmapDrawable(resources, bmp)
-//            avatar.background = ob
-
-//            Handler().postDelayed({
-                shimmer.stopShimmer()
-                shimmer.visibility = View.GONE
-//            }, 1000)
 
         }.addOnFailureListener {
 

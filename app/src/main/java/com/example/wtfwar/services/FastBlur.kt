@@ -12,6 +12,10 @@ import android.renderscript.RenderScript
 
 class FastBlur(context: Context) {
 
+    /**
+     * cover screen in blur
+     */
+
     private var rs = RenderScript.create(context)
 
     private val radius = 25
@@ -29,6 +33,9 @@ class FastBlur(context: Context) {
         return blur(resizedBmap)
     }
 
+    /**
+     * new way (gpu)
+     */
     fun blur(bitmap: Bitmap): Bitmap? {
 
         val width = bitmap.width
@@ -60,7 +67,9 @@ class FastBlur(context: Context) {
         return bitmap
     }
 
-//в память о предках
+    /**
+     * old way (cpu)
+     */
 
 //    fun fastblur(sentBitmap: Bitmap, radius: Int): Bitmap? {
 //        val bitmap = sentBitmap.copy(sentBitmap.config, true)

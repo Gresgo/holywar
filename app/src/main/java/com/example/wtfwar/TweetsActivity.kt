@@ -47,7 +47,7 @@ class TweetsActivity : AppCompatActivity() {
         tweetsQuery = tweetsDBRef.limitToFirst(20)
 
         //load list of topics
-            //TODO: same as topics   хаха че бля я забыл уже)))
+            //TODO: same as topics
         tweetsQuery.addValueEventListener(object: ValueEventListener {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -69,12 +69,12 @@ class TweetsActivity : AppCompatActivity() {
 
 
     fun addTweet(view: View){
-        val ref = tweetsDBRef.push().key
-        val tweet = TweetModel(user.uid, ref, "text")
-        tweetsDBRef.child(ref!!).setValue(tweet.toMap())
-        usertweetsDBRef.child(user.uid).push().setValue(ref)
+//        val ref = tweetsDBRef.push().key
+//        val tweet = TweetModel(user.uid, ref, "text")
+//        tweetsDBRef.child(ref!!).setValue(tweet.toMap())
+//        usertweetsDBRef.child(user.uid).push().setValue(ref)
 
-//        Toast.makeText(this@TweetsActivity, "Только дря крутых поцанов",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this@TweetsActivity, "Только дря крутых поцанов",Toast.LENGTH_SHORT).show()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
